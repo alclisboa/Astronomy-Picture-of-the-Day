@@ -1,0 +1,206 @@
+/*import da fonte */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+:root {
+    font-family: 'Montserrat', sans-serif;
+    --primary-color: #171717;
+}
+
+/* estilização do corpo da pagina */
+body {
+    margin: 0;
+    background-color: var(--primary-color);
+    color: white;
+    animation-duration: 2s;
+    animation-name: slidein;
+}
+
+/* estilização do main da pagina */
+main {
+    margin: auto;
+    text-align: center;
+}
+
+/* estilização do titulo espaçamento */
+.title-section {
+    padding: 1rem;
+}
+
+/* estilização da data */
+#datepicker {
+    width: 10rem;
+    background-image: url("/img/space.gif");
+    padding: 00.4rem;
+    position: relative;
+    font-size: 20px;
+    color: #f9f9f9;
+    border: none;
+    outline: none;
+    border-radius: 5rem;
+    box-sizing: border-box;
+}
+
+/* animação da data ao passar o mause por cima */
+#datepicker:hover {
+    transition: 0.2s ease;
+    color: #26a0d0;
+}
+
+/* estilização da imagem da API*/
+.image-div {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+#image_of_the_day {
+    width: 100%;
+}
+
+/* estilização do video da API */
+.video-div {
+    width: 80%;
+    margin: auto;
+}
+
+#videoLink {
+    width: 100%;
+    height: 70vh
+}
+
+/* estilização da descrição da API*/
+#description {
+    top: 30%;
+    left: 15%;
+    width: 70%;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.82;
+    position: fixed;
+    text-align: justify;
+    margin: 0.1rem auto 1rem;
+    border: solid 1px white;
+    padding: 0.5rem;
+    border-radius: 00.5rem;
+    background-image: url("/img/spacedescription.gif");
+}
+
+#imagemDescription {
+    width: 30px;
+}
+
+/* estilização do sobre */
+.descriptionAbout {
+    font-size: 20px;
+}
+
+/* estilização do footer */
+.o-footer {
+    padding: 1rem;
+    border: 0.5rem;
+}
+
+/* estilização do github */
+.fa-github-square {
+    text-decoration: none;
+    color: rgb(234, 234, 244);
+    padding-left: 5%;
+}
+
+/* animação da cor ao passar o mouse do github */
+#fa-github-square:hover {
+    color: #ff8591;
+    transition: 0.5s;
+    opacity: 0.7;
+}
+
+/* estilização do linkedin */
+.fa-linkedin-square {
+    text-decoration: none;
+    color: rgb(234, 234, 244);
+    padding-left: 5%;
+}
+
+/* animação da cor ao passar o mouse do  linkedin*/
+#fa-linkedin-square:hover {
+    color: #ff8591;
+    transition: 0.5s;
+    opacity: 0.7;
+}
+
+/* estilização da descrição do sobre (footer) */
+.descriptionAbout {
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.82;
+    width: auto;
+    margin: 0.1rem auto 1rem;
+    border: solid 1px white;
+    padding: 0.5rem;
+    border-radius: 00.5rem;
+    text-align: center;
+}
+
+/*estilização do link sobre APOD(footer)  */
+#aboutAPOD {
+    text-decoration-color: #ff8591;
+    color: rgb(234, 234, 244);
+    padding-left: 5%;
+}
+
+/*estilização da animação do link sobre APOD(footer)  */
+#aboutAPOD:hover {
+    color: #ff8591;
+    transition: 0.5s;
+    opacity: 0.7;
+}
+
+/*estilização do link politicas de privacidade da NASA(footer)  */
+#pPrivacidade {
+    text-decoration-color: #ff8591;
+    color: rgb(234, 234, 244);
+    padding-left: 5%;
+}
+
+/*estilização da animação do link politicas de privacidade da NASA(footer)  */
+#pPrivacidade:hover {
+    color: #ff8591;
+    transition: 0.5s;
+    opacity: 0.7;
+}
+
+/* difinindo a posição do footer na pagina */
+.description-About {
+    position: sticky;
+}
+
+/* animação ao nascer da pagina */
+@keyframes slidein {
+    from {
+        margin-top: 100%;
+        width: 300%
+    }
+
+    to {
+        margin-top: 0%;
+        width: 100%;
+    }
+}
+
+/*estilização dos para todos os elemetos do site sejam grifados/sublilhados de rosa(cor escolhida por mim)*/
+*::selection {
+    color: #f6f1f1;
+    background-color: #f86793ac;
+}
+
+
+/* estilização do icone do calendario aplicando um filtro para que assim o icone mude de cor (cor antes da animação) */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    filter: invert(100%) sepia(2%) saturate(5912%) hue-rotate(260deg) brightness(133%) contrast(89%);
+}
+
+/* estilização do icone do calendario aplicando um filtro para que assim o icone mude de cor (cor depois da animação)*/
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+    filter: invert(54%) sepia(99%) saturate(377%) hue-rotate(153deg) brightness(83%) contrast(95%);
+}

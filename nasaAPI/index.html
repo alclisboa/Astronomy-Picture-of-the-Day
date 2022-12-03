@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Astronomy Picture of the Day</title>
+
+  <!-- import dos icones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- estilizações -->
+  <link rel="stylesheet" href="./styles/menu.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./styles/fundo.css">
+
+  <!-- icone da pagina -->
+  <link rel="icon" href="/img/img12.jpeg">
+</head>
+
+<body>
+  <!-- diminuição dos efeitos visuais (retirada do background animado) -->
+  <input type="checkbox" id="dark-mode-input" />
+  <label class="dark-mode-toggler" for="dark-mode-input">
+    <section></section>
+  </label>
+  <section class="page">
+
+    <!-- header -->
+    <header class="o-header">
+      <!-- nav -->
+      <nav>
+        <!-- menu da pagina (data, descrição e sobre)-->
+        <div class="container">
+          <a href="#" class="toggleBox">
+            <span class="icon"></span>
+          </a>
+          <ul class="navItems">
+            <li class="inputData">
+              <a href="#datepicker">
+                <i class="fa fa-calendar fa-2x" style="--i:1"></i>
+                <span style="--g:1"><label for="datepiceker"><input id="datepicker" type="date" min=""
+                      max=""></label></span>
+              </a>
+            </li>
+
+            <li>
+              <a href="#media-section">
+                <i id="descriptionImage" class="fa fa-file-text fa-2x" style="--i:2"
+                  onclick="Mudarestado('description')"></i>
+                <span class="descriptionAboutMenu" style="--g:2">Descrição</span>
+            </li>
+
+            <li>
+              <a href="#footer-section">
+                <i class="fa fa-info-circle fa-2x" style="--i:4" onclick="sobre('description')"></i>
+                <span class="descriptionAboutMenu" style="--g:4">Sobre</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- main -->
+    <main class="o-main">
+      <!-- titulo, copyright -->
+      <section class="title-section">
+        <h2 id="title"></h2>
+        <p id="date"></p>
+        <small style="display: block;" id="copyright"></small>
+      </section>
+
+      <!-- imagem da api -->
+      <section id="media-section"></section>
+
+      <!-- descrição da imagem -->
+      <div class="description-div">
+        <p id="description"></p>
+      </div>
+
+      <!-- aside -->
+      <aside class="o-aside">
+        <!-- Vlibras (conjunto de ferramentas de tradução automática de Português para Libras do gov.br)-->
+        <div vw class="enabled">
+          <div vw-access-button class="active"></div>
+          <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+          </div>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+          new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
+      </aside>
+    </main>
+
+    <!-- footer -->
+    <footer id="footer-section" class="o-footer">
+      <!-- respectivos creditos ao projeto, referencias e redes socias -->
+      <div class="description-About">
+        <p class="descriptionAbout">
+          © 2022 - Site desenvolvido por Ana Luísa Carneiro Lisbôa
+          <a id="aboutAPOD" href="https://apod.nasa.gov/apod/lib/about_apod.html">Sobre o APOD</a>
+          <a id="pPrivacidade" href="https://www.nasa.gov/about/highlights/HP_Privacy.html"> Política de Privacidade da
+            NASA na Web e Avisos Importantes</a>
+          <a href="https://github.com/alclisboa">
+            <i id="fa-github-square" class="fa fa-github-square fa-2x"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/ana-luisa-3a5b1b183/">
+            <i id="fa-linkedin-square" class="fa fa-linkedin-square fa-2x"></i>
+          </a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- link do javaScript  -->
+    <script src="./Js/main.js"></script>
+    <!-- codigo em javaScript para o funcionamento do menu  -->
+    <script>
+      let toggleClick = document.querySelector(".toggleBox");
+      let container = document.querySelector(".container");
+      toggleClick.addEventListener('click', () => {
+        toggleClick.classList.toggle('active');
+        container.classList.toggle('active');
+      })
+    </script>
+
+  </section>
+
+</body>
+
+</html>
